@@ -1,0 +1,11 @@
+<body style="background-color:powderblue;">
+<h3>Upcoming Appointments</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let appointment of appointments" class="col-1-4"
+      routerLink="/appointment-detail/{{appointment.pat_id}}">
+    <div class="module hero">
+      <h4>{{appointment.date}} @ {{appointment.time}}</h4>
+    </div>
+  </a>
+</div>
+</body>

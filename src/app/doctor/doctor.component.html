@@ -1,0 +1,9 @@
+<h2>Doctors</h2>
+ 
+<ul class="doctors">
+  <li *ngFor="let doctor of doctors">
+    <a routerLink="/doctor-detail/{{doctor.id}}">
+      <span class="badge">{{doctor.id}}</span> {{doctor.name}} {{doctor.department}}
+    </a>
+  </li>
+</ul>

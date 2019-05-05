@@ -1,0 +1,38 @@
+label {
+  display: inline-block;
+  width: 7em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.0em;
+  font: arial;
+  color: #111;
+  margin-bottom: 2;
+}
+
+input {
+  height: 1.5em;
+  font-size: 1em;
+  padding-left: .4em;
+}
+button {
+  margin-top: 20px;
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}

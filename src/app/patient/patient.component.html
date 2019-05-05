@@ -1,0 +1,70 @@
+<h2>Register New Patient</h2>
+<body style="background-color:powderblue;">
+<div>
+	  <label>Name:
+	    <input #name />
+	  </label>
+  <div>
+	  <label>ID:
+	    <input #id />
+	  </label>
+  </div>
+  <div>
+	  <label>Gender:
+	    <input #gender />
+	  </label>
+  </div>
+  <div>
+	  <label>Phone Number:
+	    <input #phone />
+	  </label>
+  </div>
+  <div>
+	  <label>Date of Birth:
+	    <input #dob />
+	  </label>
+  </div>
+  <div>
+	  <label>Address:
+	    <input #address />
+	  </label>
+  </div>
+  <div>
+	  <label>SSN:
+	    <input #ssn />
+	  </label>
+  </div>
+  <div>
+	  <label>Insurance ID:
+	    <input #insurance />
+	  </label>
+  </div>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <!--
+  <button (click)="add(name.value, id.value, gender.value, phone.value,
+  						 dob.value, address.value, ssn.value, insurance.value);
+  				name.value='';
+  				id.value='';
+  				gender.value='';
+  				phone.value='';
+  				dob.value='';
+  				address.value='';
+  				ssn.value='';
+  				insurance.value='';">
+    Register
+  </button>
+  -->
+</div>
+</body>
+
+<h2>Patients</h2>
+ 
+<body style="background-color:powderblue;">
+<ul class="patients">
+  <li *ngFor="let patient of patients">
+    <a routerLink="/patient-detail/{{patient.id}}">
+      <span class="badge">{{patient.name}}</span>{{patient.id}}
+    </a>
+  </li>
+</ul>
+</body>
