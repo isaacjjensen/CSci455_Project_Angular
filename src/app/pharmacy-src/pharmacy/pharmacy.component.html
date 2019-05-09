@@ -1,0 +1,11 @@
+<h2>Pharmacies</h2>
+ 
+<body style="background-color:powderblue;">
+<ul class="pharmacies">
+  <li *ngFor="let pharmacy of pharmacies">
+    <a routerLink="/pharmacy-detail/{{pharmacy.id}}">
+      <span class="badge">{{pharmacy.name}} </span>
+    </a>
+  </li>
+</ul>
+</body>

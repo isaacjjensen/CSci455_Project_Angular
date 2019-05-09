@@ -1,0 +1,11 @@
+<h2>Payments</h2>
+ 
+<body style="background-color:powderblue;">
+<ul class="payments">
+  <li *ngFor="let payment of payments">
+    <a routerLink="/payment-detail/{{payment.id}}">
+      <span class="badge">{{payment.date}} </span>{{payment.paid}}/{{payment.amount}}
+    </a>
+  </li>
+</ul>
+</body>

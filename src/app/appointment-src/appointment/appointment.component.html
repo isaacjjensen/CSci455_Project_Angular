@@ -1,0 +1,51 @@
+<h2>Schedule Appointment</h2>
+<body style="background-color:powderblue;">
+<div>
+	  <label>Date:
+	    <input #date />
+	  </label>
+  <div>
+	  <label>Time:
+	    <input #time />
+	  </label>
+  </div>
+  <div>
+	  <label>Patient ID:
+	    <input #patId />
+	  </label>
+  </div>
+  <div>
+	  <label>Doctor ID:
+	    <input #docId />
+	  </label>
+  </div>
+  <div>
+	  <label>Institution ID:
+	    <input #instId />
+	  </label>
+  </div>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(patId.value, docId.value, instId.value, date.value, time.value);
+  				patId.value='';
+  				docId.value='';
+  				instId.value='';
+  				date.value='';
+  				time.value='';">
+    Schedule
+  </button>
+</div>
+</body>
+
+<h2>Appointments</h2>
+ 
+<body style="background-color:powderblue;">
+<ul class="appointments">
+  <li *ngFor="let appointment of appointments">
+    <a routerLink="/appointment-detail/{{appointment.id}}">
+      <span class="badge">{{appointment.date}} </span>{{appointment.time}}
+    </a>
+    <button class="remove" title="remove appointment"
+      (click)="delete(appointment)">x</button>
+  </li>
+</ul>
+</body>

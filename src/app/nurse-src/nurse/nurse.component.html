@@ -1,0 +1,11 @@
+<h2>Nurses</h2>
+ 
+<body style="background-color:powderblue;">
+<ul class="nurses">
+  <li *ngFor="let nurse of nurses">
+    <a routerLink="/nurse-detail/{{nurse.id}}">
+      <span class="badge">{{nurse.name}} </span>{{nurse.id}}
+    </a>
+  </li>
+</ul>
+</body>

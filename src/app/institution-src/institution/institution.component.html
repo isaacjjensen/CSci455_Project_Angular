@@ -1,0 +1,11 @@
+<h2>Institutions</h2>
+ 
+<body style="background-color:powderblue;">
+<ul class="institutions">
+  <li *ngFor="let institution of institutions">
+    <a routerLink="/institution-detail/{{institution.id}}">
+      <span class="badge">{{institution.inst_name}} </span>{{institution.id}}
+    </a>
+  </li>
+</ul>
+</body>

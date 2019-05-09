@@ -1,0 +1,11 @@
+<h2>Departments</h2>
+ 
+<body style="background-color:powderblue;">
+<ul class="departments">
+  <li *ngFor="let department of departments">
+    <a routerLink="/department-detail/{{department.id}}">
+      <span class="badge">{{department.d_num}}</span>{{department.d_name}}
+    </a>
+  </li>
+</ul>
+</body>

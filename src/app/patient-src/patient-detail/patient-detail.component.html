@@ -1,0 +1,51 @@
+<div *ngIf="patient">
+  <body style="background-color:powderblue;">
+  <h2>{{patient.name}}</h2>
+  <div>
+  	<label>ID: </label>{{patient.id}}
+  </div>
+  <div>
+  	<label>Birth Date: </label>{{patient.birthdate}}
+  </div>
+  <div>
+  	<label>SSN: </label>{{patient.ssn}}
+  </div>
+  <div>
+  	<label>Gender: </label>{{patient.gender}}
+  </div>
+  <div>
+  	<label>Phone Number:
+  		<input [(ngModel)]="patient.phone" placeholder="phone"/>
+  	</label>
+  </div>
+  <div>
+  	<label>Address: 
+  		<input [(ngModel)]="patient.address" placeholder="address"/>
+  	</label>
+  </div>
+  <div>
+  	<label>Insurance ID: 
+  		<input [(ngModel)]="patient.insurance" placeholder="insurance"/>
+  	</label>
+  </div>
+  <div>
+    <a routerLink="/patient-medical-record/{{patient.id}}">
+      <span class="badge">Medical Record</span>
+    </a>
+  </div>
+  <div>
+    <a routerLink="/patient-prescription/{{patient.id}}">
+      <span class="badge">Prescriptions</span>
+    </a>
+  </div>
+  <div>
+    <a routerLink="/patient-payment/{{patient.id}}">
+      <span class="badge">Payments</span>
+    </a>
+  </div>
+  <div>
+    <button (click)="goBack()">Back</button>
+    <button (click)="save()">Save Changes</button>
+  </div>
+  </body>
+</div>

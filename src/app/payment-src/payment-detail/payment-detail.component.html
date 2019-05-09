@@ -1,0 +1,11 @@
+<body style="background-color:powderblue;">
+<div *ngIf="payment">
+  <h2>{{payment.date}} Payment Details:</h2>
+  <div><span>Patient ID: </span>{{payment.id}}</div>
+  <div><span>Amount: </span>{{payment.amount}}</div>
+  <div><span>Paid: </span>{{payment.paid}}</div>
+  <div><span>Reason: </span>{{payment.reason}}</div>
+  <div><span>Status: </span>{{payment.status}}</div>
+  <div><span>Insurance ID: </span>{{payment.insur_id}}</div>
+</div>
+</body>

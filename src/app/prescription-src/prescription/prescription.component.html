@@ -1,0 +1,11 @@
+<h2>Prescriptions</h2>
+ 
+<body style="background-color:powderblue;">
+<ul class="prescriptions">
+  <li *ngFor="let prescription of prescriptions">
+    <a routerLink="/prescription-detail/{{prescription.id}}">
+      <span class="badge">{{prescription.start_date}} to {{prescription.end_date}}</span>{{prescription.medication}}
+    </a>
+  </li>
+</ul>
+</body>
